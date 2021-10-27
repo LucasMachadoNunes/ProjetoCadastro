@@ -5,13 +5,15 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetocadastro.HelloController">
+<AnchorPane prefHeight="811.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetocadastro.CadastroController">
    <children>
-      <TextField alignment="CENTER" layoutX="8.0" layoutY="62.0" prefHeight="25.0" prefWidth="192.0" promptText="Nome" />
+      <TextField fx:id="colunanome" alignment="CENTER" layoutX="8.0" layoutY="62.0" prefHeight="25.0" prefWidth="192.0" promptText="Nome" />
       <TextField alignment="CENTER" layoutX="217.0" layoutY="62.0" prefHeight="25.0" prefWidth="192.0" promptText="Sobrenome     " />
       <DatePicker fx:id="dataNasc" layoutX="414.0" layoutY="62.0" promptText="      Data de nascimento" />
       <TextField alignment="CENTER" layoutX="8.0" layoutY="142.0" prefHeight="25.0" prefWidth="192.0" promptText="Endereço" />
@@ -22,14 +24,27 @@
       <CheckBox fx:id="checkFem" layoutX="283.0" layoutY="226.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Feminino" />
       <TextField alignment="CENTER" layoutX="380.0" layoutY="200.0" prefHeight="25.0" prefWidth="192.0" promptText="Email" />
       <TextField alignment="CENTER" layoutX="55.0" layoutY="271.0" prefHeight="25.0" prefWidth="192.0" promptText="Telefone" />
-      <TextField alignment="CENTER" layoutX="8.0" layoutY="271.0" prefHeight="25.0" prefWidth="47.0" promptText="DDD" />
-      <Button layoutX="393.0" layoutY="307.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="174.0" text="Salvar" />
-      <Button layoutX="196.0" layoutY="307.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="174.0" text="Apagar" />
+      <Button layoutX="367.0" layoutY="655.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="174.0" text="Salvar" />
+      <Button layoutX="189.0" layoutY="655.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="174.0" text="Apagar" />
       <Label alignment="CENTER" layoutX="173.0" layoutY="200.0" prefHeight="25.0" prefWidth="206.0" text="Sexo" textAlignment="CENTER" />
       <Label alignment="CENTER" layoutX="217.0" layoutY="22.0" prefHeight="25.0" prefWidth="192.0" text="Formulário de cadastro">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
+      <TableView fx:id="tabelacadastro" layoutX="-10.0" layoutY="327.0" prefHeight="328.0" prefWidth="614.0" AnchorPane.bottomAnchor="165.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="307.0">
+        <columns>
+          <TableColumn fx:id="colunaNome" prefWidth="70.0" text="Nome" />
+          <TableColumn fx:id="colunaSobrenome" text="Sobrenome" />
+            <TableColumn fx:id="colunaDtnasc" prefWidth="75.0" text="Data Nasc" />
+            <TableColumn fx:id="colunaEndereco" minWidth="0.0" prefWidth="92.0" text="Endereço" />
+            <TableColumn fx:id="colunaCidade" maxWidth="158.0" prefWidth="109.0" text="Cidade" />
+            <TableColumn fx:id="colunaCep" minWidth="1.0" prefWidth="118.0" text="CEP" />
+            <TableColumn fx:id="colunaUF" minWidth="0.0" prefWidth="39.0" text="UF" />
+            <TableColumn fx:id="colunaSexo" maxWidth="315.0" minWidth="0.0" prefWidth="41.0" text="Sexo" />
+            <TableColumn fx:id="colunaEmail" prefWidth="110.0" text="Email" />
+            <TableColumn fx:id="colunaTelefone" maxWidth="277.0" minWidth="0.0" prefWidth="95.0" text="Telelefone" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
