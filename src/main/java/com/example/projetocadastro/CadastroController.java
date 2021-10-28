@@ -30,7 +30,8 @@ public class CadastroController implements Initializable {
         int selectedID = Cadastros.getSelectionModel().getSelectedIndex();
         Cadastros.getItems().remove(selectedID);
     }
-    private ObservableList Cadastros;
+    @FXML
+    private ObservableList Cadastro;
 
     @FXML
     ComboBox<String> comboUF = new ComboBox();
@@ -85,17 +86,6 @@ public class CadastroController implements Initializable {
         System.out.println("Data Selecionada: " + date);
         System.out.println(checkMasc.isSelected());
         System.out.println(checkFem.isSelected());
-        carregarTableViewCadastros();
     }
 }
-   public void carregarTableViewCadastros(){
-       List cadastros = new ArrayList();
-        TableColumncolunanome.setCellFactory(new PropertyValueFactory<>("Nome"));
-        TableColumncolunasobrenome.setCellFactory(new PropertyValueFactory<>("Sobrenome"));
-        list.add(new Cadastro("Juliana","Almeida"));
-        list.add(new Cadastro("Luciano","Gomes"));
 
-        observableListCadastros = FXCollections.observableArrayList(listCadastros);
-
-        tableViewCadastros.setItems(observableListCadastros);
-    }
