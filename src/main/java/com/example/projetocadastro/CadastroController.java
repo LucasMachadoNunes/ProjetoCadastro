@@ -17,7 +17,10 @@ import java.util.ResourceBundle;
 public class CadastroController implements Initializable {
     String[] siglas = {"AC","BA","CE","DF","PR","SP","RS","SC","TO"};
 
+    @FXML
     private TableView Cadastros;
+
+    @FXML
     private ObservableList Cadastros;
 
     @FXML
