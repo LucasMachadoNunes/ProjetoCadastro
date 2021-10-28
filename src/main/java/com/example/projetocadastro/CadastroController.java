@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.time.LocalDate;
@@ -18,9 +19,17 @@ public class CadastroController implements Initializable {
     String[] siglas = {"AC","BA","CE","DF","PR","SP","RS","SC","TO"};
 
     @FXML
-    private TableView Cadastros;
+    private ListView<String> Cadastros;
 
     @FXML
+    void adicionarcad(MouseEvent event){
+        Cadastros.getItems().add(colunanome.getText());
+    }
+    @FXML
+    void removercad(MouseEvent event){
+        int selectedID = Cadastros.getSelectionModel().getSelectedIndex();
+        Cadastros.getItems().remove(selectedID);
+    }
     private ObservableList Cadastros;
 
     @FXML
