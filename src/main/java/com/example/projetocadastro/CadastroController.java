@@ -22,7 +22,7 @@ public class CadastroController implements Initializable {
     private ListView<String> Cadastros;
 
     @FXML
-    void adicionarcad(MouseEvent event){
+    void salvarcad(MouseEvent event){
         Cadastros.getItems().add(colunanome.getText());
     }
     @FXML

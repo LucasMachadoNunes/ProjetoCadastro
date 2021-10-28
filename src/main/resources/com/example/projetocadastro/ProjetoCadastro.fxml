@@ -24,8 +24,8 @@
       <CheckBox fx:id="checkFem" layoutX="283.0" layoutY="226.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Feminino" />
       <TextField alignment="CENTER" layoutX="380.0" layoutY="200.0" prefHeight="25.0" prefWidth="192.0" promptText="Email" />
       <TextField alignment="CENTER" layoutX="55.0" layoutY="271.0" prefHeight="25.0" prefWidth="192.0" promptText="Telefone" />
-      <Button fx:id="salvarcad" layoutX="367.0" layoutY="655.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="174.0" text="Salvar" />
-      <Button layoutX="189.0" layoutY="655.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="174.0" text="Apagar" />
+      <Button fx:id="salvarcad" layoutX="367.0" layoutY="655.0" mnemonicParsing="false" onAction="#save" onMouseClicked="#salvarcad" prefHeight="25.0" prefWidth="174.0" text="Salvar" />
+      <Button layoutX="189.0" layoutY="655.0" mnemonicParsing="false" onMouseClicked="#removercad" prefHeight="25.0" prefWidth="174.0" text="Apagar" />
       <Label alignment="CENTER" layoutX="173.0" layoutY="200.0" prefHeight="25.0" prefWidth="206.0" text="Sexo" textAlignment="CENTER" />
       <Label alignment="CENTER" layoutX="217.0" layoutY="22.0" prefHeight="25.0" prefWidth="192.0" text="Formulário de cadastro">
          <font>
